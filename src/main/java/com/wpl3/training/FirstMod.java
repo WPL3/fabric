@@ -1,9 +1,12 @@
 package com.wpl3.training;
 
+import com.wpl3.training.Items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static com.wpl3.training.Items.ModItems.registerModItems;
 
 public class FirstMod implements ModInitializer {
 	public static final String MOD_ID = "first-mod";
@@ -11,8 +14,8 @@ public class FirstMod implements ModInitializer {
     // what is this line doing?
 	@Override
 	public void onInitialize() {
+        ModItems.registerModItems();
 
 
-		LOGGER.info("Hello Fabric world!");
-	}
+    }
 }
